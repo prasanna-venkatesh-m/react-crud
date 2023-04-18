@@ -6,7 +6,6 @@ import Apiall from './components/Apiall';
 function App() {
   return (
     <div>
-      {/* <Home /> */}
     <Apiall />
     </div>
   );
