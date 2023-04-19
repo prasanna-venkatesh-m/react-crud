@@ -20,7 +20,7 @@ const DisplayEmployee = (props) => {
   const length=employeelist.length;
 
   const callApifunc=async()=>{
-    let res=await fetch('https://localhost:7258/api/Employee2');
+    let res=await fetch('https://192.168.1.119:45455/api/Employee2');
         let resJson=await res.json();
         setEmployeelist(resJson);
   }
