@@ -9,7 +9,7 @@ const Apiall=()=>{
 
     const addEmployee=(employee)=>
     {
-        axios.post('https://localhost:7258/api/Employee2',employee)
+        axios.post('https://192.168.1.119:45455/api/Employee2',employee)
          .then(response =>{
         console.log(response); 
         window.location.reload(false);
@@ -22,7 +22,7 @@ const Apiall=()=>{
 
     const deleteEmployee=(deleteid)=>
     {
-        axios.delete(`https://localhost:7258/api/Employee2/${deleteid}`)
+        axios.delete(`https://192.168.1.119:45455/api/Employee2/${deleteid}`)
         .then(response =>{
         console.log(response);
         window.location.reload(false);
@@ -40,14 +40,14 @@ const Apiall=()=>{
 
     const findEmployeebyid=async(employeeID)=>
     {
-        let result= await fetch(`https://localhost:7258/api/Employee2/${employeeID}`)
+        let result= await fetch(`https://192.168.1.119:45455/api/Employee2/${employeeID}`)
         let resultJson=await result.json();
         setSingleEmp({employeeID: resultJson.employeeID,employeename: resultJson.employeename, age: resultJson.age, department: resultJson.department, emailID: resultJson.emailID,city:resultJson.city});
     }
 
     const updateEmployee=(employee)=>
     {
-        axios.put(`https://localhost:7258/api/Employee2/${employee.employeeID}`,employee)
+        axios.put(`https://192.168.1.119:45455/api/Employee2/${employee.employeeID}`,employee)
         .then(response =>{
             console.log(response);
         })
