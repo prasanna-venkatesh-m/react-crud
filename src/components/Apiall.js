@@ -52,7 +52,7 @@ const Apiall=()=>{
             console.log(response);
         })
         .catch(error=>{
-            console.log(error)
+            console.log(error);
             alert("Error in saving Edited changes")
         })
     }
